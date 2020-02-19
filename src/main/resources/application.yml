@@ -1,0 +1,24 @@
+server:
+  port: 8090
+jwt:
+  token:
+    secret: jwtappdemo
+    validityInMilliseconds: 3600000
+spring:
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/sinamapp
+    username: postgres
+    password: 123456
+    driverClassName: org.postgresql.Driver
+
